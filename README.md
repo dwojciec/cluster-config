@@ -1,6 +1,6 @@
 # GitOps Cluster Configuration
 
-This repo contains the cluster configuration I use for my personal OpenShift clusters. Like my other GitOps repos it leverages ArgoCD heavily. This repo originally followed the folder structure defined in the [Standards](https://github.com/gnunn-gitops/standards) repository but there has been some tweaks that need to be reflected back in that document.
+This repo contains the cluster configuration I use for my personal OpenShift clusters. Like my other GitOps repos it leverages ArgoCD heavily. This repo originally followed the folder structure defined in the [Standards](https://github.com/dwojciec/standards) repository but there has been some tweaks that need to be reflected back in that document.
 
 # Structure
 
@@ -13,7 +13,7 @@ Similar to my standards document, the repo consists of four high level folders:
 
 While this structure follows the basic principles in my standards document I am in the process of re-factoring the naming as well as attempting to simplify the level of nesting.
 
-![alt text](https://raw.githubusercontent.com/gnunn-gitops/cluster-config/master/docs/img/argocd.png)
+![alt text](https://raw.githubusercontent.com/dwojciec/cluster-config/master/docs/img/argocd.png)
 
 # Usage
 
