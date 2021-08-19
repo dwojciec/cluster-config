@@ -1,0 +1,82 @@
+# Query: gnunn-gitops
+
+35 results - 22 files
+
+README.md:
+   3: This repo contains the cluster configuration I use for my personal OpenShift clusters. Like my other GitOps repos it leverages ArgoCD heavily. This repo originally followed the folder structure defined in the [Standards](https://github.com/gnunn-gitops/standards) repository but there has been some tweaks that need to be reflected back in that document.
+  16: ![alt text](https://raw.githubusercontent.com/dwojciec/cluster-config/master/docs/img/argocd.png)
+
+bootstrap/overlays/local.home/cluster-config-manager-app.yaml:
+  15:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+clusters/local.home/argocd/apps/clusterversion/base/clusterversion-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/generate-argocd-apps.sh:
+   3: sealed_secrets=(sealed-secrets "https://github.com/gnunn-gitops/cluster-config.git" master components/apps/sealed-secrets-operator/overlays/default "1")
+   5: lets_encrypt=(letsencrypt-certs "https://github.com/gnunn-gitops/cluster-config.git" master components/apps/letsencrypt-certs/overlays/default "2")
+   7: storage=(config-storage "https://github.com/gnunn-gitops/cluster-config.git" master components/configs/storage/base "3")
+   9: authentication=(config-authentication "https://github.com/gnunn-gitops/cluster-config.git" master components/configs/oauth/overlays/google-with-matrix "4")
+  11: groups=(config-groups-and-membership "https://github.com/gnunn-gitops/cluster-config.git" master components/configs/groups-and-membership/overlays/default "11")
+  13: alertmanager=(config-alertmanager "https://github.com/gnunn-gitops/cluster-config.git" master components/configs/alertmanager/base "11" )
+  15: consolelinks=(config-console-links "https://github.com/gnunn-gitops/cluster-config.git" master components/configs/consolelinks/base "11")
+  17: helm_repos=(config-helm-repos "https://github.com/gnunn-gitops/cluster-config.git" master components/configs/helm-repos/base "11")
+  19: prometheus_user_app=(config-prometheus-user-app "https://github.com/gnunn-gitops/cluster-config.git" master components/configs/prometheus-user-app/base "11")
+  23: cost=(config-cost-management "https://github.com/gnunn-gitops/cluster-config.git" master clusters/home/apps/cost-management-operator/overlays/default "21")
+  25: ns=(config-namespace-config-operator "https://github.com/gnunn-gitops/cluster-config.git" master components/apps/namespace-configuration-operator/overlays/default "21")
+  27: sso=(config-sso "https://github.com/gnunn-gitops/cluster-config.git"  master clusters/home/apps/sso/overlays/default "21")
+  31: tenant_product_catalog=(tenant-product-catalog "https://github.com/gnunn-gitops/cluster-config.git" master tenants/product-catalog/argocd/applicationset/base "51")
+
+components/argocd/apps/config-alertmanager/base/config-alertmanager-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/config-authentication/base/config-authentication-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/config-console-links/base/config-console-links-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/config-cost-management/base/config-cost-management-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/config-dev-tools/base/config-dev-tools-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/config-groups-and-membership/base/config-groups-and-membership-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/config-helm-repos/base/config-helm-repos-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/config-namespace-config-operator/base/config-namespace-config-operator-app.yaml:
+  18:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/config-prometheus-user-app/base/config-prometheus-user-app-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/config-sso/base/config-sso-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/config-storage/base/config-storage-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/letsencrypt-certs/base/letsencrypt-certs-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/sealed-secrets/base/sealed-secrets-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/argocd/apps/tenant-product-catalog/base/tenant-product-catalog-app.yaml:
+  17:     repoURL: https://github.com/gnunn-gitops/cluster-config.git
+
+components/configs/consolelinks/base/argocd-link.yaml:
+  11:     imageURL: https://raw.githubusercontent.com/gnunn-gitops/cluster-config/master/docs/img/argocd-logo.png
+
+components/configs/helm-repos/base/gnunn-gitops-repo.yaml:
+  7:     url: 'https://gnunn-gitops.github.io/helm-charts'
+
+components/configs/helm-repos/base/kustomization.yaml:
+  4: - gnunn-gitops-repo.yaml
+
+tenants/product-catalog/argocd/applicationset/base/tenant-applicationset.yaml:
+  52:         repoURL: https://github.com/gnunn-gitops/cluster-config
