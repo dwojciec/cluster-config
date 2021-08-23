@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
 - annotate-secret-job.yaml
 - annotate-secret-sa.yaml
-- alertmanager-main-sealed-secret.json
+- alertmanager-main-sealed-secret.yaml
