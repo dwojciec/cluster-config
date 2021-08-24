@@ -6,5 +6,4 @@ metadata:
     openshift.io/display-name:  Product Catalog Test
   labels:
     size: medium
-    argocd.argoproj.io/managed-by: openshift-gitops #argocd instance ns    
   name: product-catalog-test

@@ -4,6 +4,4 @@ metadata:
   annotations:
     openshift.io/description: Project for gitops tool for product catalog team
     openshift.io/display-name:  Product Catalog GitOps
-  labels:
-    argocd.argoproj.io/managed-by: openshift-gitops #argocd instance ns    
   name: product-catalog-gitops
